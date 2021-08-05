@@ -13,3 +13,4 @@ Feature: Login as different users
     And the title contains "Dashboard"
     #driver,storemanager,salesmanager
    #you will have one step definition and it will handle differnet usertypes
+

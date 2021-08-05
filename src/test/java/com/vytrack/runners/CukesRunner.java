@@ -6,11 +6,14 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"json:target/cucumber.json"},
+        plugin = {"json:target/cucumber.json",                  // --> target/cucumber.jason
+                "html:target/default-html-reports"},            // --> Cucumber Reporting
 
         features = "src/test/resources/features",
             glue = "com/vytrack/step_definitions",
             dryRun = false,
+            tags = "@wip"
+
             // Run all scenarios that has @driver and @VYT-123 tags
             //tags = "@driver and @VYT-123"       // NEW VERSION ***
             //tags = {"@driver" , "@VYT-123"}   // OLD VERSION ***
@@ -19,7 +22,7 @@ import org.junit.runner.RunWith;
             // Run all the scenarios that has @login tag, But SKIP @wip and @sales_manager tags.
             //tags = "@login and not @wip and not @sales_manager"
             //tags = {"@login" , "~@wip" , "~@sales_manager"}   // --> OLD VERSION
-            tags = "@wip"
+
 )
 
 public class CukesRunner {
