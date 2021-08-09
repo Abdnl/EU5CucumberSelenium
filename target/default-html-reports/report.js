@@ -5,12 +5,12 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Verify Create Calender Event",
+  "name": "login as a given user",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@wip"
+      "name": "@wipp"
     }
   ]
 });
@@ -28,37 +28,31 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user enters the sales manager information",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.vytrack.step_definitions.LoginStepDefs.the_user_enters_the_sales_manager_information()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the user navigates to \"Activities\" \"Calendar Events\"",
+  "name": "the user logs in using following credentials",
+  "rows": [
+    {},
+    {},
+    {},
+    {}
+  ],
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.vytrack.step_definitions.NavigationMenuStepDefs.the_user_navigates_to(java.lang.String,java.lang.String)"
+  "location": "com.vytrack.step_definitions.ContactsStepDefs.the_user_logs_in_using_following_credentials(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the title contains \"Calendars\"",
+  "name": "the user should be able to login",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.vytrack.step_definitions.LoginStepDefs.the_title_contains(java.lang.String)"
+  "location": "com.vytrack.step_definitions.LoginStepDefs.the_user_should_be_able_to_login()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.vytrack.step_definitions.LoginStepDefs.the_title_contains(LoginStepDefs.java:67)\r\n\tat ✽.the title contains \"Calendars\"(file:///C:/Users/ADMIN/IdeaProjects/EU5CucumberSelenium/src/test/resources/features/Contacts.feature:14)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png", "screenshot");
 formatter.after({
   "status": "passed"
 });
